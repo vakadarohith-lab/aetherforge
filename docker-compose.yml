@@ -16,6 +16,18 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
 
+
+  analysis:
+    build:
+      context: ./analysis
+    environment:
+      PORT: 8001
+      PROMETHEUS_URL: http://prometheus:9090
+    depends_on:
+      - prometheus
+    ports:
+      - "8001:8001"
+
   grafana:
     image: grafana/grafana:11.5.2
     depends_on:
