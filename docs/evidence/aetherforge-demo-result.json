@@ -1,0 +1,17 @@
+﻿{
+  "evidence": {
+    "average_latency_seconds": 0.8003,
+    "http_5xx_error_rate": 0.0
+  },
+  "note": "Recommendations only; no infrastructure changes are made.",
+  "recommendations": [
+    {
+      "issue": "High average request latency",
+      "observed_value_seconds": 0.8003,
+      "recommendation": "Inspect slow endpoints and investigate application processing time.",
+      "severity": "warning",
+      "threshold_seconds": 0.5
+    }
+  ],
+  "service": "AetherForge Telemetry Analysis"
+}
